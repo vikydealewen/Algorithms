@@ -75,7 +75,7 @@ function swap(items, leftIndex, rightIndex){
     items[rightIndex] = temp;
 }
 
-function partition(items, left, right) {
+function partition2(items, left, right) {
   let pivot = items[Math.floor((right + left) / 2)], //middle element
     i = left, //left pointer
     j = right; //right pointer
@@ -104,7 +104,7 @@ function quickSortOth(items, left, right) {
   let index;
 
   if (items.length > 1) {
-    index = partition(items, left, right); //index returned from partition
+    index = partition2(items, left, right); //index returned from partition
 
     if (left < index - 1) { //more elements on the left side of the pivot
       quickSortOth(items, left, index - 1);

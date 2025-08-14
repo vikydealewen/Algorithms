@@ -5,7 +5,7 @@ function selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     let indexMin = i;
     for (let j = i + 1; j < arr.length; j++) {
-      if (array[j] < array[indexMin]) {
+      if (arr[j] < arr[indexMin]) {
         indexMin = j
       }
       
@@ -13,13 +13,14 @@ function selectionSort(arr) {
     }
     
     //Поменяли элементы местами
-    let tmp = array[i];
-    array[i] = array[indexMin];
-    array[indexMin] = tmp;
+    let tmp = arr[i];
+    arr[i] = arr[indexMin];
+    arr[indexMin] = tmp;
   }
 
-  return array
+  return arr
 }
 
 console.log(selectionSort(array));
+console.log(array.length);
 console.log('count = ', count);
